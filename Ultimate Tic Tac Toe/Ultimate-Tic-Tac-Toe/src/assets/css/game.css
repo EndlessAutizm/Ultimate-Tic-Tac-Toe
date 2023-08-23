@@ -1,0 +1,124 @@
+:root {
+	/* - INTERFACE ------- */
+
+	/* fonts */
+	--title-font: 'Bitter', serif;
+	--text-font: 'Roboto', sans-serif;
+
+	/* cores */
+	--primary-bg: #282c34;
+	--secundary-bg: #3b4049;
+	--tertiary-bg: #16191f;
+	--text-color: #f1f1f1;
+	--accent: #61dafb;
+
+	/* valores */
+	--outer-radius: 15px;
+	--inner-radius: 10px;
+	--small-radius: 5px;
+
+	
+	/* - JOGO ----------- */
+
+	/* cores */
+	--cross-color: #f15f7f;
+	--circle-color: #61dafb;
+
+	/* valores */
+
+}
+
+.name{
+	color: var(--circle-color);
+}
+.name:nth-of-type(2){
+	color: var(--cross-color);
+}
+
+.game-info{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+	background-color: var(--secundary-bg);
+	border-radius: var(--inner-radius);
+	padding: 1vh 2vw;
+	color: var(--text-color);
+	text-align: left;
+	line-height: 2em;
+}
+
+.game-info .button{
+	height: fit-content;
+	padding: 1vh 1vw;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+/* Campo de Jogo */
+
+.game-board{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+
+	height: 47vh;
+
+	background-color: var(--secundary-bg);
+	border-radius: var(--inner-radius);
+	padding: 2vh 1vw;
+	margin: 2vh 0 1vh;
+
+	text-align: center;
+}
+
+
+.board{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+
+	background-color: var(--primary-bg);
+	border-radius: var(--inner-radius);
+	margin: 0.5vh;
+
+	color: white;
+
+}
+
+.board div{
+	border: 1px solid var(--secundary-bg);
+}
+
+.cell{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Utils */
+
+.X{
+	background-color: var(--cross-color);
+	border: 5px solid var(--cross-color);
+}
+.X div {
+	border: 1px solid white;
+}
+
+.O{
+	background-color: var(--circle-color);
+	border: 5px solid var(--circle-color);
+}
+.O div {
+	border: 1px solid white;
+}
+
+.D{
+	background-color: #f0f0f0;
+	border: 5px solid #f0f0f0;
+	color: black;
+}
+.D div {
+	border: 1px solid var(--tertiary-bg);
+}	
